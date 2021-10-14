@@ -1,4 +1,4 @@
-import { BaseAuthEvent } from './base-auth-event';
+import { BaseEvent } from './base-event';
 import { UserDocument } from '../models';
 
 export type UserSignedUpRestPayload = {
@@ -6,7 +6,7 @@ export type UserSignedUpRestPayload = {
   email: string;
 };
 
-export default class UserSignedUp extends BaseAuthEvent<UserSignedUpRestPayload> {
+export default class UserSignedUp extends BaseEvent<UserSignedUpRestPayload> {
   private user: UserDocument;
 
   private statusCode = 201;

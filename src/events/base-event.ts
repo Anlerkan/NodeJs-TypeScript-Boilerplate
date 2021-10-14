@@ -1,4 +1,4 @@
-export abstract class BaseAuthEvent<TRest = unknown> {
+export abstract class BaseEvent<TRest = unknown> {
   abstract serializeRest(): TRest;
 
   abstract getStatusCode(): number;

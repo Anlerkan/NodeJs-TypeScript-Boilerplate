@@ -1,4 +1,4 @@
-import { BaseAuthEvent } from './base-auth-event';
+import { BaseEvent } from './base-event';
 import { UserDocument } from '../models';
 
 export type UserVerifiedRestPayload = {
@@ -6,7 +6,7 @@ export type UserVerifiedRestPayload = {
   verificationStatus: string;
 };
 
-export default class UserVerified extends BaseAuthEvent<UserVerifiedRestPayload> {
+export default class UserVerified extends BaseEvent<UserVerifiedRestPayload> {
   private user: UserDocument;
 
   private statusCode = 200;
